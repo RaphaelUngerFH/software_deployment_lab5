@@ -25,3 +25,14 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t lab5_app:latest .
+
+    - name: Log in to Docker Hub 
+      env: 
+        DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }} 
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }} 
+      run: echo $DOCKER_ACCESS_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin
+    
+    - name: Tag and Push Docker image 
+      run: | 
+        docker tag lab5_app:development $DOCKER_USERNAME/lab5_app:development 
+        docker push $DOCKER_USERNAME/lab5_app:development
