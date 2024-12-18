@@ -29,7 +29,7 @@ app.post('/checksum', (req, res) => {
   console.log(req)
 
   if (!input || typeof input !== 'string') {
-      return res.status(400).json({ error: 'Please use a string.' });
+      return res.status(400).json({ error: 'Please use a valid string.' });
   }
 
   const checksum = customHashAlgorithm(input);
