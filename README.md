@@ -21,6 +21,18 @@ This link leads to the Docker image inside the Registry :
 - [Development](https://lab5-dev-ayg3c8f0cvetgebw.canadacentral-01.azurewebsites.net/)
 - [Production](https://lab5-prod-adfnerh3augngegm.canadacentral-01.azurewebsites.net/)
 
+### Routes
+You can send a string to `/checksum` in order to generate the corresponding checksum for it. 
+
+#### Example Data
+``` JSON
+{
+    'input': 'HelloWorld'
+}
+```
+results in
+`1a2fa200`
+
 ## Github Actions
 ### Finished pipeline
 ![Finished Pipeline](./Showcase/github_action_success.png)
