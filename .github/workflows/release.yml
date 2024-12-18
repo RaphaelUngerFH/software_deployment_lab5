@@ -36,5 +36,5 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         run: |
-          docker tag lab5_app:development $DOCKER_USERNAME/lab5_app:latest 
+          docker tag lab5_app:latest $DOCKER_USERNAME/lab5_app:latest 
           docker push $DOCKER_USERNAME/lab5_app:latest
