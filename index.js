@@ -36,7 +36,7 @@ app.post('/checksum', (req, res) => {
   res.json({ checksum });
 });
 app.get('/', (_, res) => {
-  res.send('Hello World!');
+  res.send('Send a post request to /checksum to generate a checksum for a string :)');
 });
 
 module.exports = app;
